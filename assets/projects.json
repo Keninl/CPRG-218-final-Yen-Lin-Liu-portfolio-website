@@ -1,0 +1,29 @@
+{
+  "projects": [
+    {
+      "title": "Can We Kiss Forever?",
+      "image": "images/projects1.0.png",
+      "description": "A visual poem combining fire and floral symbolism to evoke longing and release.",
+      "category": "poster"
+    },
+    {
+      "title": "LHF Monogram",
+      "image": "images/projects2.0.png",
+      "description": "A minimalist monogram representing Love, Hope, and Faith in a classic serif form.",
+      "category": "logo"
+    },
+    {
+      "title": "Arcane Circle",
+      "image": "images/projects3.0.png",
+      "description": "A mystic-themed illustration reflecting internal cycles and protection energy.",
+      "category": "illustration"
+    },
+    {
+      "title": "The inspiration of text",
+      "image": "images/projects4.0.png",
+      "description": "Typography artwork combining dark letters with tattoo aesthetics.",
+      "category": "typography"
+    }
+  ]
+}
+

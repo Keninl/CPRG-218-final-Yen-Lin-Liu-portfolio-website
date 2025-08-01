@@ -120,3 +120,299 @@ footer {
   color: #555;
   padding: 0 1rem;
 }
+/*about*/
+/* About section */
+/* ========== ABOUT SECTION ========== */
+.about {
+  position: relative;
+  height: 80vh;
+  background-image: url("../images/about.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-overlay {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 2rem;
+  text-align: center;
+  max-width: 600px;
+}
+
+.about h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* ========== ACCORDION STYLES ========== */
+.accordion-section {
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 1rem;
+}
+
+.accordion-toggle {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-toggle:hover {
+  background-color: #555;
+}
+
+.accordion-content {
+  display: none;
+  background-color: #fffaf0;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* 展開時加上 open 類別 */
+.accordion-content.open {
+  display: block;
+}
+
+
+
+/* Contact Section */
+/* ✅ 讓 contact 頁面專屬使用背景圖 */
+.contact-page {
+  background-image: url("../images/contact.jpg"); /* 👈 根據你目前的圖片資料夾設定 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ✅ Contact 區塊排版樣式 */
+.contact-section {
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 4rem 2rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+  text-align: center;
+}
+
+.contact-section h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contact-section input,
+.contact-section textarea {
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.contact-section textarea {
+  min-height: 150px;
+}
+
+.contact-section button {
+  padding: 0.75rem;
+  font-weight: bold;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+  background-color: #444;
+}
+
+.contact-section .social-links {
+  margin-top: 1rem;
+  .contact-section .social-links a i {
+  margin-right: 6px;
+}
+
+}
+
+.contact-section .social-links a {
+  margin: 0 1rem;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-section .social-links a:hover {
+  text-decoration: underline;
+}
+.form-message {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  text-align: center;
+}
+
+.form-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hidden {
+  display: none;
+}
+
+/*projects*/
+/* Projects Grid */
+/* === Project Grid Container === */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* === Card 基本樣式 === */
+.project-card {
+  position: relative;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  aspect-ratio: 3 / 4;
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* === Hover 時浮出說明文字 === */
+.overlay-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.project-card:hover .overlay-text {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.overlay-text h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.overlay-text p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin: 0;
+}
+
+/* === Filter Buttons === */
+.filter-controls {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.filter-btn:hover {
+  background-color: #555;
+}
+
+/* === Modal 樣式 === */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0; top: 0; width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
