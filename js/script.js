@@ -136,3 +136,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+/*about*/
+// Accordion toggle 功能
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.querySelector(".accordion-toggle");
+  const content = document.querySelector(".accordion-content");
+
+  if (toggleBtn && content) {
+    toggleBtn.addEventListener("click", () => {
+      content.classList.toggle("open");
+    });
+  }
+});
